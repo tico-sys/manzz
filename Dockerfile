@@ -12,7 +12,7 @@ RUN apk add --no-cache \
 
 WORKDIR /app
 COPY package.json package-lock.json ./
-RUN npm install
+RUN npm ci --production=false
 COPY . .
 
 CMD ["npm", "start"]
